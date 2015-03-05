@@ -1,0 +1,26 @@
+@import 'nib'
+@import 'mixins'
+
+global-reset()
+establish-baseline('normalize')
+
+*, *:before, *:after
+	box-sizing border-box
+
+.box
+	width 50%
+	background red
+	height 200px
+	.inner
+		box-sizing border-box
+		width 100%
+		padding 20px
+		height 10px
+		background blue
+		.child
+			box-sizing border-box
+			width 100%
+			background green
+			padding 5%
+p
+	font-size 1em

@@ -1,0 +1,19 @@
+{
+  "name": "__PROJECTNAME",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "*"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-browserify": "*",
+    "gulp-concat": "*",
+    "gulp-jade": "*",
+    "gulp-jshint": "^1.7.1",
+    "gulp-livereload": "*",
+    "gulp-stylus": "*",
+    "gulp-uglify": "*",
+    "jshint-stylish": "^0.4.0",
+    "nib": "*"
+  }
+}

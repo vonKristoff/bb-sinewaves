@@ -1,0 +1,8 @@
+mixin checkbox(id, name, label)
+  input(type="checkbox" id=id name=name)
+  label(for=id)
+    span label
+
+mixin subframe(title)
+  fieldset.subframe
+    legend= title
