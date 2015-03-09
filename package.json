@@ -1,12 +1,17 @@
 {
-  "name": "__PROJECTNAME",
+  "name": "BB-SineWaves",
   "version": "0.1.0",
   "dependencies": {
-    "jquery": "*"
+    "backbone": "^1.1.2",
+    "backbone.localstorage": "^1.1.16",
+    "handlebars": "^3.0.0",
+    "jquery": "*",
+    "requirejs": "^2.1.16",
+    "requirejs-text": "^2.0.12",
+    "underscore": "^1.8.2"
   },
   "devDependencies": {
     "gulp": "*",
-    "gulp-browserify": "*",
     "gulp-concat": "*",
     "gulp-jade": "*",
     "gulp-jshint": "^1.7.1",

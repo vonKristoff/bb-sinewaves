@@ -1,26 +1,105 @@
 @import 'nib'
-@import 'mixins'
 
 global-reset()
-establish-baseline('normalize')
+
+_blue = #02698e
+_white = #fff
+_darker = #015371
+_darkblue = #00008b
 
 *, *:before, *:after
-	box-sizing border-box
+  box-sizing border-box
 
-.box
-	width 50%
-	background red
-	height 200px
-	.inner
-		box-sizing border-box
-		width 100%
-		padding 20px
-		height 10px
-		background blue
-		.child
-			box-sizing border-box
-			width 100%
-			background green
-			padding 5%
-p
-	font-size 1em
+ul
+  margin 0 padding 0
+  list-style none
+
+body
+  font-family geomanist
+  background-color _blue
+  color _white
+
+.nav-bar
+  width 100%
+  padding 1em
+  background-color _darker
+  border-bottom 1px solid _white
+  .msg
+    display none
+  .options
+    li
+      display inline-block
+      margin-right 2em
+
+.sines-view
+  position relative
+
+.sinesCollection
+  margin-bottom 50px
+  width calc(75% + 4px)
+  .stats-container
+    left 1em
+    display inline-block
+    vertical-align top
+    font-size 1em
+    width 25%
+  .col-left   
+    text-align left
+    span
+      display block
+      margin 1.5em 0
+      font-size .5em
+    .stats
+      margin-bottom 1em
+  .col-right
+    width 70%
+    display inline-block
+
+  li
+    height calc(150px + 2em)
+    margin 1em 0
+    position relative
+    display inline-block
+    padding 1em
+    width calc(50% - 4px)
+    &.active
+      canvas
+        background-color #000
+canvas
+  border 1px solid _white 
+
+.panel
+  position fixed
+  top 0
+  background-color _darker
+  border-left 1px solid _white
+  width calc(25% - 2px)
+  right 0
+  height 100vh
+  padding 2em
+  padding-top 1em
+  h1
+    margin-bottom 2em
+  .ranges
+    position relative
+    font-size .5em
+    line-height 3em
+  label
+    position absolute
+    right 0
+    text-align right
+  input
+    appearance none
+    height 1px
+    border-bottom 1px solid _white
+    &:focus
+      outline none
+    &:hover
+      cursor pointer
+  input[type="range"]::-webkit-slider-thumb
+    -webkit-appearance none
+    border-radius 50%
+    border 1px solid _white
+    width 1em
+    height 1em
+    background-color _darker

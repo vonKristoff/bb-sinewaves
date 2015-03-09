@@ -1,0 +1,22 @@
+<script type="text/handlebars">
+<h1>Panel Control</h1>
+<div class="ranges">
+  <input type="range" min="1" max="10" id="thickness" value="{{thickness}}"/>
+  <label for="thickness">Line weight: {{ thickness }}</label>
+
+  <input type="range" min="0" max="150" id="frequency" step='5' value="{{frequency}}"/>
+  <label for="frequency">Frequency: {{ frequency }}</label>
+
+  <input type="range" min="0" max="100" id="amplitude" step='5' value="{{amplitude}}"/>
+  <label for="amplitude">Amplitude: {{ amplitude }}</label>
+
+  <input type="range" min="0" max="100" id="speed" step='1' value="{{speed}}"/>
+  <label for="speed">Speed: {{ speed }}</label>
+
+  <input type="range" min="1" max="100" id="steps" step='1' value="{{steps}}"/>
+  <label for="steps">Steps: {{ steps }}</label>
+
+  <input type="range" min="0" max="250" id="fade" step='10' value="{{fade}}"/>
+  <label for="fade">Fade Strength: {{ fade }}</label>
+</div>
+</script>

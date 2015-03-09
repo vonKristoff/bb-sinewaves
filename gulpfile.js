@@ -31,7 +31,7 @@ var paths = {
 gulp.task('stylus', function(){  
   gulp.src(paths.stylus)
     .pipe(stylus({ use:[nib()] }))
-    .pipe(gulp.dest(paths.dest + 'css'))
+    .pipe(gulp.dest('./css'))
     .pipe(refresh())
 });
 
@@ -39,7 +39,7 @@ gulp.task('stylus', function(){
 gulp.task('jade',function() {
   gulp.src(paths.jade)
     .pipe(jade())
-    .pipe(gulp.dest('../'))
+    .pipe(gulp.dest('./js/templates'))
     .pipe(refresh())
 })
 
@@ -78,7 +78,7 @@ gulp.task('default', function(){
   
   gulp.watch('./stylus/*.styl', ['stylus']);
   gulp.watch('./jade/**/*.jade',['jade']);
-  gulp.watch('./js/**/*.js',['js']);
+  // gulp.watch('./js/**/*.js',['js']);
 
 });
 

@@ -1,41 +1,23 @@
-define(['jquery', 'transparency', 'models', 'controller'], function ($, Transparency, Models, Controller){
+define(['backbone','views/app', 'models/app'], function (Backbone, AppView, AppModel){
+  
+  var initialize = function (){
 
-  // bind Template engine to jQuery
-  $.fn.render = Transparency.jQueryPlugin;
+    var appModel = new AppModel({id: 'JCN'}),
+        appView = new AppView({model: appModel});
+    
+    $('body').append(appView.render().el)
 
-  var App = function(){
-    
-    this.init();
-      
-    return this.api()
+
+    // set router
+    // start history
+
+    // fetch data
+    appModel.fetch(); // from local storage
+    // create new collection and fetch from server
   }
-  var ap = App.prototype;
-  
-  ap.init = function(){
-    // add templates to page
-    $('.wrapper').load('partials/content.html', function(){
-      
-      
-    }.bind(this));  
-  };
-  
-  ap.render = function(){
-    
+
+  return {
+    initialize: initialize
   }
-  
-  ap.errs = function (msg){
-    var data = {
-      msg: msg
-    }
-    Transparency.render(document.getElementById('error'), data);
-  }
-  ap.api = function(){
-    return {
-      info: {
-        version: 1.0,
-        name: 'My App'
-      }
-    }
-  }
-  return App;
+
 });

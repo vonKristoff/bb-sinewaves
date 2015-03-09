@@ -1,17 +1,10 @@
-require.config({
-  baseUrl: 'js',
-  paths: {
-      jquery:       'libs/jquery'
-  ,   transparency: 'libs/transparency'
-  ,   spinner:      'libs/spin'
-  ,   velocity:     'libs/velocity'
-  }
-});
+require(['config'], function(){
 
-require(['app'], function (App) {
+  require(['backbone', 'app', 'enterframe'], function (Backbone, App, EnterFrame) {
 
-  window.TwitterBookmarks = new App();
+    window.enterFrame = new EnterFrame();
 
-  console.log(window.TwitterBookmarks);
-
-});
+    App.initialize();
+      
+  })
+})  
